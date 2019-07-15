@@ -12,9 +12,9 @@ MQTT_ADDR = "{}:{}".format(MQTT_IP_ADDR, str(MQTT_PORT))
 
 def shutdown(hermes, intent_message):
     current_session_id = intent_message.session_id
-    hermes.publish_end_session(current_session_id, 'Shutting down')
+    hermes.publish_end_session(current_session_id, 'Rebooting')
 
-    os.system('sudo shutdown now -h')
+    os.system('sudo reboot')
 
 
 if __name__ == "__main__":
