@@ -20,6 +20,6 @@ def shutdown(hermes, intent_message):
 if __name__ == "__main__":
 
     with Hermes(MQTT_ADDR.encode("ascii")) as h:
-        h.subscribe_intent("Martin1887:ApagarSnips", shutdown) \
-            .subscribe_intent("Martin1887:ShutdownSnips", shutdown) \
+        h.subscribe_intent("jdavila:ReiniciarSnips", reboot) \
+            .subscribe_intent("jdavila:RebootSnips", reboot) \
             .loop_forever()
