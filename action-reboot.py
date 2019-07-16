@@ -10,7 +10,7 @@ MQTT_PORT = 1883
 MQTT_ADDR = "{}:{}".format(MQTT_IP_ADDR, str(MQTT_PORT))
 
 
-def shutdown(hermes, intent_message):
+def reboot(hermes, intent_message):
     current_session_id = intent_message.session_id
     hermes.publish_end_session(current_session_id, 'Rebooting')
 
